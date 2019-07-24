@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+@applicant1 = Applicant.new(first_name: "Jon", last_name: "Bobbit", user_name:"jonnyb123")
+@applicant2 = Applicant.new(first_name: "Tom", last_name: "Smith", user_name:"tsmitty")
+@applicant3 = Applicant.new(first_name: "Sarah", last_name: "Johnson", user_name:"sjohnson")
+@applicant4 = Applicant.new(first_name: "Sam", last_name: "work", user_name:"dogolover")
+@applicant5 = Applicant.new(first_name: "Lisa", last_name: "Antwi", user_name:"lantwi")
+@applicant6 = Applicant.new(first_name: "Will", last_name: "Smith", user_name:"smittywilly")
+@applicant7 = Applicant.new(first_name: "Jesse", last_name: "Berman", user_name:"Jberma")
+
+@pet1 = Pet.new(name: "Ghost", breed: "German Shepard", age: 5)
+@pet2 = Pet.new(name: "Mushu", breed: "Shiba Inu", age: 3)
+@pet3 = Pet.new(name: "Jack", breed: "Mutt", age: 13)
+@pet4 = Pet.new(name: "Lanny", breed: "Australian Blue Heeler", age: 3)
+@pet5 = Pet.new(name: "Jada", breed: "Mix", age: 5)
+@pet6 = Pet.new(name: "Gunner", breed: "Great Dane", age: 3)
+@pet7 = Pet.new(name: "Milo", breed: "Yorkie", age: 2)
+
+
+@application1 = Application.new(status:, pet_id: @pet1, @applicant_id: @applicant1)
+@application2 = Application.new(status:, pet_id: @pet1, @applicant_id: @applicant2)
+@application3 = Application.new(status:, pet_id: @pet2, @applicant_id: @applicant3)
+@application4 = Application.new(status:, pet_id: @pet3, @applicant_id: @applicant4)
+@application5 = Application.new(status:, pet_id: @pet5, @applicant_id: @applicant5)
+@application6 = Application.new(status:, pet_id: @pet7, @applicant_id: @applicant7)
