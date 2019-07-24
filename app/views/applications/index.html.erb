@@ -1,6 +1,6 @@
 <h1>All Applications</h1>
 <ul>
     <% @applications.each do |application| %>
-      <li>  <%= link_to "#{application.id} - #{application.applicant.first_name} adopting #{application.pet.name}", application_path(application) %> </li>
+      <li><%= link_to application.id, applications_path(application)%>   <%= link_to application.app_applicant, applicants_path(application.applicant)%>   adopting    <%=link_to application.pet_name, pets_path(application.pet)%> </li>
     <% end %>
 </ul>
