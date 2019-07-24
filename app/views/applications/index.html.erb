@@ -1,2 +1,6 @@
-<h1>Applications#index</h1>
-<p>Find me in app/views/applications/index.html.erb</p>
+<h1>All Applications</h1>
+<ul>
+    <% @applications.each do |application| %>
+      <li>  <%= link_to "#{application.id} - #{application.applicant.first_name} adopting #{application.pet.name}", application_path(application) %> </li>
+    <% end %>
+</ul>

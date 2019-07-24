@@ -1,6 +1,6 @@
 class ApplicantsController < ApplicationController
   def index
-    @applicant = Applicant.all
+    @applicants = Applicant.all
   end
 
   def show
@@ -12,6 +12,7 @@ class ApplicantsController < ApplicationController
   end
 
   def edit
+    @applicant = Applicant.find(params[:id])
   end
 
   def create 
@@ -20,6 +21,9 @@ class ApplicantsController < ApplicationController
   end 
 
   def update
+    @applicant = Applicant.find(params[:id])
+    @applicant.update(applicant_params)
+    redirect_to applicant_path(@applicant)
   end
 
   private
