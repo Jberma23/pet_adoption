@@ -3,4 +3,5 @@ Rails.application.routes.draw do
  resources :applications
  resources :pets
  get 'home', to: 'application#home' 
+ 
 end
