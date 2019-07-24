@@ -15,8 +15,16 @@ class PetsController < ApplicationController
   end
 
   def create 
+    @pet = Pet.create(pet_params)
+    redirect_to pet_path(@pet)
   end
 
   def update
+  end
+
+  private 
+
+  def pet_params
+    params.require(:pet).permit(:name, :age, :breed)
   end
 end
