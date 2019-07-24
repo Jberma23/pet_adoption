@@ -15,9 +15,16 @@ class ApplicantsController < ApplicationController
   end
 
   def create 
-
+    @applicant = Applicant.create(applicant_params)
+    redirect_to applicant_path(@applicant)
   end 
 
   def update
+  end
+
+  private
+
+  def applicant_params
+    params.require(:applicant).permit(:first_name, :last_name, :user_name)
   end
 end

@@ -1,2 +1,12 @@
-<h1>Applicants#new</h1>
-<p>Find me in app/views/applicants/new.html.erb</p>
+<h1>Add applicant </h1>
+
+<%= form_for (@applicant) do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+
+    <%= f.submit %>
+<% end %>
